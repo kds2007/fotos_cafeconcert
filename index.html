@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galería de Fotos</title>
+  <link rel="stylesheet" href="styles.css" />
+<style>
+ body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f2f5f9;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  padding: 30px 20px 10px;
+  background: linear-gradient(to bottom, #dfe9f3, #ffffff);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+header p {
+  font-size: 1.1em;
+  color: #666;
+  margin-top: 8px;
+}
+
+.titulo-decorado {
+  text-align: center;
+  font-size: 1.8em;
+  color: #34495e;
+  font-weight: 600;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.titulo-decorado::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #a29bfe;
+  margin: 10px auto 0;
+  border-radius: 3px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.photo {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.photo:hover {
+  transform: translateY(-5px);
+}
+
+.photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  cursor: pointer;
+}
+
+.photo a {
+  display: block;
+  background-color: #74b9ff;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 0.95em;
+  font-weight: bold;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.photo a:hover {
+  background-color: #0984e3;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.95em;
+  color: #555;
+  background-color: #f0f4f8;
+  border-top: 1px solid #ddd;
+}
+
+footer a {
+  color: #e1306c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.lightbox-img {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(255,255,255,0.3);
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close:hover {
+  color: #ff7675;
+}
+</style>
+</head>
+<body>
+  <header>
+    <h1>Galería de Fotos</h1>
+    <p>Descargá las imágenes que más te gusten</p>
+  </header>
+
+  <h2 class="titulo-decorado">Grupo Evangelismo - "Una Forma Diferente"</h2>
+
+  <div class="gallery">
+    <div class="photo"><img src="fotos/foto1.jpeg" alt="Foto 1" class="zoomable"><a href="fotos/foto1.jpeg" download>Descargar</a></div>
+    <div class="photo"><img src="fotos/foto2.jpeg" alt="Foto 2" class="zoomable"><a href="fotos/foto2.jpeg" download>Descargar</a></div>
+    <div class="photo"><img src="fotos/foto3.jpeg" alt="Foto 3" class="zoomable"><a href="fotos/foto3.jpeg" download>Descargar</a></div>
+    <div class="photo"><img src="fotos/foto4.jpeg" alt="Foto 4" class="zoomable"><a href="fotos/foto4.jpeg" download>Descargar</a></div>
+    <div class="photo"><img src="fotos/foto5.jpeg" alt="Foto 5" class="zoomable"><a href="fotos/foto5.jpeg" download>Descargar</a></div>
+    <div class="photo"><img src="fotos/foto6.jpeg" alt="Foto 6" class="zoomable"><a href="fotos/foto6.jpeg" download>Descargar</a></div>
+    <div class="photo"><img src="fotos/foto7.jpeg" alt="Foto 7" class="zoomable"><a href="fotos/foto7.jpeg" download>Descargar</a></div>
+    <div class="photo"><img src="fotos/foto8.jpeg" alt="Foto 8" class="zoomable"><a href="fotos/foto8.jpeg" download>Descargar</a></div>
+    <div class="photo"><img src="fotos/foto9.jpeg" alt="Foto 9" class="zoomable"><a href="fotos/foto9.jpeg" download>Descargar</a></div>
+    <div class="photo"><img src="fotos/foto10.jpeg" alt="Foto 10" class="zoomable"><a href="fotos/foto10.jpeg" download>Descargar</a></div>
+    <div class="photo"><img src="fotos/foto11.jpeg" alt="Foto 11" class="zoomable"><a href="fotos/foto11.jpeg" download>Descargar</a></div>
+    <div class="photo"><img src="fotos/foto12.jpeg" alt="Foto 12" class="zoomable"><a href="fotos/foto12.jpeg" download>Descargar</a></div>
+    <div class="photo"><img src="fotos/foto13.jpeg" alt="Foto 13" class="zoomable"><a href="fotos/foto13.jpg" download>Descargar</a></div>
+    <div class="photo"><img src="fotos/foto14.jpeg" alt="Foto 14" class="zoomable"><a href="fotos/foto14.jpeg" download>Descargar</a></div>
+    <div class="photo"><img src="fotos/foto15.jpeg" alt="Foto 15" class="zoomable"><a href="fotos/foto15.jpeg" download>Descargar</a></div>
+    <div class="photo"><img src="fotos/foto16.jpeg" alt="Foto 16" class="zoomable"><a href="fotos/foto16.jpeg" download>Descargar</a></div>
+    <div class="photo"><img src="fotos/foto17.jpeg" alt="Foto 17" class="zoomable"><a href="fotos/foto17.jpeg" download>Descargar</a></div>
+    <div class="photo"><img src="fotos/foto18.jpeg" alt="Foto 18" class="zoomable"><a href="fotos/foto18.jpeg" download>Descargar</a></div>
+    <div class="photo"><img src="fotos/foto19.jpeg" alt="Foto 19" class="zoomable"><a href="fotos/foto19.jpeg" download>Descargar</a></div>
+    <div class="photo"><img src="fotos/foto20.jpeg" alt="Foto 20" class="zoomable"><a href="fotos/foto20.jpeg" download>Descargar</a></div>
+    <div class="photo"><img src="fotos/foto21.jpeg" alt="Foto 21" class="zoomable"><a href="fotos/foto21.jpeg" download>Descargar</a></div>
+    <div class="photo"><img src="fotos/foto22.jpeg" alt="Foto 22" class="zoomable"><a href="fotos/foto22.jpeg" download>Descargar</a></div>
+    <div class="photo"><img src="fotos/foto23.jpeg" alt="Foto 23" class="zoomable"><a href="fotos/foto23.jpeg" download>Descargar</a></div>
+    <div class="photo"><img src="fotos/foto24.jpeg" alt="Foto 24" class="zoomable"><a href="fotos/foto24.jpeg" download>Descargar</a></div>
+    <div class="photo"><img src="fotos/foto25.jpeg" alt="Foto 25" class="zoomable"><a href="fotos/foto25.jpeg" download>Descargar</a></div>
+    <!-- FIN DE FOTOS -->
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-img" src="" alt="Imagen ampliada">
+  </div>
+
+  <!-- Footer con Instagram -->
+  <footer>
+    <p>
+      Seguinos en Instagram:
+      <a href="https://www.instagram.com/unafomadiferente" target="_blank">@unafomadiferente</a>
+    </p>
+  </footer>
+
+  <!-- Script para abrir imagen -->
+  <script>
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.querySelector(".lightbox-img");
+    const closeBtn = document.querySelector(".close");
+
+    document.querySelectorAll(".zoomable").forEach(img => {
+      img.addEventListener("click", () => {
+        lightbox.style.display = "block";
+        lightboxImg.src = img.src;
+      });
+    });
+
+    closeBtn.addEventListener("click", () => {
+      lightbox.style.display = "none";
+      lightboxImg.src = "";
+    });
+
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) {
+        lightbox.style.display = "none";
+        lightboxImg.src = "";
+      }
+    });
+  </script>
+</body>
+</html>
